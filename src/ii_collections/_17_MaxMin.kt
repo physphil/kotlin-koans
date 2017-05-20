@@ -14,4 +14,6 @@ fun Customer.getMostExpensiveOrderedProduct(): Product? {
     // Return the most expensive product which has been ordered
     val products = orders.flatMap { it.products }
     return products.maxBy { it.price }
+
+    // or, use customer.orderedProducts from 16
 }
